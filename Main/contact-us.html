@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        .service-info {
+    width: 100%;
+    height: 35vh;
+
+}
+
+.service-info .overlay {
+    width: 100%;
+    height: 35vh;
+    background-color: #1e2744b9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.overlay h1 {
+    font-family: "Inter";
+    color: white;
+    font-size: 50px;
+    margin-left: 50px;
+}
+
+.overlay p {
+    font-family: "Inter";
+    color: white;
+    margin-left: 50px;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.yellow-text {
+    font-family: "Inter";
+    font-size: 20px;
+    color: #efc75e;
+}
+
+#Contactus {
+    margin-top: 130px;
+}
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+
+    <section class="service-info" style="background: url(../Services-Images/appliance-repair.png) no-repeat center center / cover;">
+        <div class="overlay">
+            <h1>CONTACT US</h1>
+            <p>Home : <span class="yellow-text">Contact Us</span></p>
+        </div>
+    </section>
+
+    <section id="Contactus">
+        <div class="contact">
+          <div class="contacus">
+            <div class="Contactdiv">
+              <div class="blocks">
+                <div class="block">
+                  <img src="../Main-Assets/location.png" alt="Location" />
+                  <h3>Our location</h3>
+                  <p>Mianwali, Punjab, Pakistan</p>
+                </div>
+                <div class="block">
+                  <img src="../Main-Assets/mail.png" alt="MailUS" />
+                  <h3>Mail Us</h3>
+                  <p>example@gmail.com</p>
+                </div>
+                <div class="block">
+                  <img src="../Main-Assets/Phone.png" alt="Call now" />
+                  <h3>Call Now</h3>
+                  <p>+923123456789</p>
+                </div>
+                <div class="block">
+                  <img src="../Main-Assets/clock.png" alt="clock" />
+                  <h3>Working Hours</h3>
+                  <p>Mon-Sat: 09AM-09PM</p>
+                </div>
+              </div>
+              <div class="form">
+                <form action="../PHP/contact_process.php" method="post">
+                  <input type="text" name="name" placeholder="Name" required />
+                  <input type="email" name="email" placeholder="Email" required />
+                  <input type="tel" name="number" placeholder="Number" required />
+                  <input type="text" name="subject" placeholder="Subject" required />
+                  <textarea name="message" rows="5" placeholder="Message" required></textarea>
+                  <button type="submit">Submit</button>
+                </form>                
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <div id="footer"></div>
+    <script src="../Header-Footer/headerFooter.js"></script>
+</body>
+</html>

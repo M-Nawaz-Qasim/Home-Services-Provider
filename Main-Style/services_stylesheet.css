@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Poppins:wght@100..900&display=swap');
+
+.ServiceMain h2{
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    margin: 90px 0px;
+}
+.servicecards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 95%;
+    margin: auto;
+}
+.servicecards > .card:nth-child(odd) {
+    transform: translateY(30px);
+}
+
+.servicecards .card{
+    background-color: #F6F2F2;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 20%;
+    transition: transform 0.3s ease-in-out;
+}
+.servicecards .card img{
+    width: 100%;
+    height: 200px;
+}
+.servicecards .card h3{
+    padding: 30px 0px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.servicecards .card:hover {
+    transform: scale(1.05);
+}
+
+#Services a {
+    text-decoration: none;
+    color: black;
+    font-family: "Inter";
+}
+
+.service-info {
+    width: 100%;
+    height: 35vh;
+}
+
+.service-info .overlay {
+    width: 100%;
+    height: 35vh;
+    background-color: #1e2744b9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.overlay h1 {
+    font-family: "Inter";
+    color: white;
+    font-size: 50px;
+    margin-left: 50px;
+}
+
+.overlay p {
+    font-family: "Inter";
+    color: white;
+    margin-left: 50px;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.yellow-text {
+    font-family: "Inter";
+    font-size: 20px;
+    color: #efc75e;
+}

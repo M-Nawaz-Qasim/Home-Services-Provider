@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Poppins:wght@100..900&display=swap');
+
+body,
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.service-info {
+    width: 100%;
+    height: 35vh;
+}
+
+.service-info .overlay {
+    width: 100%;
+    height: 35vh;
+    background-color: #1e2744b9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.overlay h1 {
+    font-family: "Inter";
+    color: white;
+    font-size: 50px;
+    margin-left: 50px;
+}
+
+.overlay p {
+    font-family: "Inter";
+    color: white;
+    margin-left: 50px;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.yellow-text {
+    font-family: "Inter";
+    font-size: 20px;
+    color: #efc75e;
+}
+
+.service-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.service-section-image-container {
+    width: 60%;
+    height: 80vh;
+    margin-bottom: 20px;
+}
+
+.service-section-text p {
+    margin-bottom: 20px;
+    font-family: "Inter";
+    font-size: 20px;
+}
+
+.service-section-text-bold {
+    font-family: "Inter";
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.form-section {
+    display: flex;
+    justify-content: center;
+}
+
+.form-container {
+    width: 60%;
+}
+
+.form-container input[type=text],
+.form-container textarea {
+    width: 90%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #e6e6e6;
+    color: #000;
+}
+
+.form-container input[type=email],
+.form-container input[type=tel],
+.form-container input[type=date],
+.form-container select {
+    width: 45%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #e6e6e6;
+    color: #000;
+}
+
+
+.form-container button {
+    background-color: #df600b;
+    width: 15%;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #b44800;
+}

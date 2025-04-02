@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <link rel="stylesheet" href="signup_style.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <section>
+      <div class="overlay-signup">
+        <div class="box">
+          <img src="Images/home-service-vector.png" alt="Home Service" />
+          <div class="signup-box">
+            <p>SIGN <span class="up">UP</span></p>
+            <div class="form-box">
+              <form
+                action="../PHP/signup.php"
+                method="POST"
+                enctype="multipart/form-data"
+                id="signup_form"
+              >
+                <input
+                  type="text"
+                  name="full_name"
+                  placeholder="FULL NAME"
+                  required
+                />
+                <input
+                  type="text"
+                  name="contact_number"
+                  placeholder="CONTACT NUMBER"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="EMAIL ADDRESS"
+                  required
+                />
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="PASSWORD"
+                  required
+                />
+                <input
+                  type="password"
+                  name="confirm_password"
+                  placeholder="CONFIRM PASSWORD"
+                  required
+                />
+
+                <select
+                  name="user_type"
+                  id="user_type"
+                  required
+                  onchange="toggleProviderFields()"
+                >
+                  <option value="" disabled selected>Select User Type</option>
+                  <option value="customer">Customer</option>
+                  <option value="service_provider">Service Provider</option>
+                </select>
+
+                <div id="providerFields" style="display: none">
+                  <label for="service_id">Select Service:</label>
+                  <select name="service_id" id="service_id">
+                    <option value="1">Appliances Repair</option>
+                    <option value="2">Carpentry Services</option>
+                    <option value="3">Cleaning Services</option>
+                    <option value="4">Computer & IT Support</option>
+                    <option value="5">Laundry & Dry Cleaning</option>
+                    <option value="6">Electric Services</option>
+                    <option value="7">Fencing & Deck Services</option>
+                    <option value="8">Flooring Services</option>
+                    <option value="9">Gardening & Landscaping</option>
+                    <option value="10">Home Automation Setup</option>
+                    <option value="11">HVAC Maintenance</option>
+                    <option value="12">Painting Services</option>
+                    <option value="13">Personal Chef or Catering</option>
+                    <option value="14">Pest Control</option>
+                    <option value="15">Plumbing Services</option>
+                    <option value="16">Pool Maintenance</option>
+                    <option value="17">Renovation & Remodeling</option>
+                    <option value="18">Roofing Services</option>
+                    <option value="19">Security Systems Installation</option>
+                    <option value="20">Window Cleaning</option>
+                  </select>
+
+                  <label for="expertise_proof"
+                    >Upload Proof of Expertise:</label
+                  >
+                  <input
+                    type="file"
+                    name="expertise_proof"
+                    id="expertise_proof"
+                    required
+                  />
+                </div>
+
+                <p>
+                  <input type="checkbox" required />
+                  <a href="terms.html">I accept all terms & conditions</a>
+                </p>
+
+                <button type="submit">SIGN UP</button>
+              </form>
+              <p class="msg">
+                Already have an account? <a href="login.html">Login here</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/01/31/10/20250131101555-LIZ1X50J.js"></script>
+
+    <div id="footer"></div>
+    <!-- Include SweetAlert2 (Popup Library) -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+      function toggleProviderFields() {
+        var userType = document.getElementById("user_type").value;
+        var providerFields = document.getElementById("providerFields");
+
+        if (userType === "service_provider") {
+          providerFields.style.display = "block";
+          document
+            .getElementById("service_id")
+            .setAttribute("required", "true");
+          document
+            .getElementById("expertise_proof")
+            .setAttribute("required", "true");
+        } else {
+          providerFields.style.display = "none";
+          document.getElementById("service_id").removeAttribute("required");
+          document
+            .getElementById("expertise_proof")
+            .removeAttribute("required");
+        }
+      }
+
+      document
+        .getElementById("signup_form")
+        .addEventListener("submit", function (event) {
+          var password = document.querySelector("input[name='password']").value;
+          var confirmPassword = document.querySelector(
+            "input[name='confirm_password']"
+          ).value;
+          var userType = document.getElementById("user_type").value;
+
+          // **Check if Passwords Match**
+          if (password !== confirmPassword) {
+            event.preventDefault(); // **STOP FORM SUBMISSION**
+            Swal.fire({
+              icon: "error",
+              title: "Password Mismatch ❌",
+              text: "Your password and confirm password do not match!",
+            });
+            return false;
+          }
+
+          // **If Service Provider, Ensure Fields are Filled**
+          if (userType === "service_provider") {
+            var serviceId = document.getElementById("service_id").value;
+            var expertiseProof =
+              document.getElementById("expertise_proof").value;
+
+            if (!serviceId || !expertiseProof) {
+              event.preventDefault(); // **STOP FORM SUBMISSION**
+              Swal.fire({
+                icon: "warning",
+                title: "Missing Information ⚠️",
+                text: "Please select a service and upload proof of expertise.",
+              });
+              return false;
+            }
+          }
+        });
+    </script>
+
+    <script src="../Header-Footer/headerFooter.js"></script>
+  </body>
+</html>

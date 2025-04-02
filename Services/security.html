@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Security System Installation</title>
+    <link rel="stylesheet" href="../Services-Style/style.css"/>
+    
+  </head>
+  <body>
+    <div id="header"></div>
+    <section class="service-info" style="background: url(../Services-Images/security-system.jpg) no-repeat center center / cover;">
+        <div class="overlay">
+            <h1 id="service-title">SECURITY SYSTEM INSTALLATION</h1>
+            <p>Home : <span class="yellow-text">Services > Security System Installation</span></p>
+        </div>
+    </section>
+    <section class="service-section">
+        <div class="service-section-image-container" style="background: url(../Services-Images/security-system.jpg) no-repeat center center / cover;">
+        </div>
+        <div class="service-section-text">
+            <p><span class="service-section-text-bold">Security System Installation : </span>CCTV, alarm systems, and motion detectors.</p>
+        </div>
+    </section>
+    <section class="form-section">
+        <div class="form-container">
+            <form action="../PHP/book_service.php" method="POST" onsubmit="return checkLogin()">
+                <input type="hidden" name="service_name" id="service_name">
+
+                <input type="text" name="full_name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+
+                <select name="service_provider" id="service_provider" required>
+                    <option value="" disabled selected>Loading providers...</option>
+                </select>
+
+                <input type="date" name="date" required>
+                <input type="text" name="address" placeholder="Address" required>
+                <textarea name="additional_info" placeholder="Additional Info" rows="4"></textarea>
+
+                <p>Payment Method: <strong>Cash on Delivery</strong></p>
+
+                <button type="submit">BOOK NOW</button>
+            </form>
+        </div>
+    </section>
+    <div id="footer"></div>
+    <script src="../Header-Footer/headerFooter.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let serviceName = document.getElementById("service-title").innerText.trim();
+            document.getElementById("service_name").value = serviceName;
+
+            fetch(`../PHP/get_providers.php?service_name=${encodeURIComponent(serviceName)}`)
+                .then(response => response.json())
+                .then(data => {
+                    let providerDropdown = document.getElementById("service_provider");
+                    providerDropdown.innerHTML = '<option value="" disabled selected>Select Provider</option>';
+                    data.forEach(provider => {
+                        providerDropdown.innerHTML += `<option value="${provider.id}">${provider.full_name}</option>`;
+                    });
+                });
+        });
+
+        function checkLogin() {
+            if (!sessionStorage.getItem("loggedIn")) {
+                alert("Please log in to book a service.");
+                window.location.href = "../Login-Signup/login.html";
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+</body>
+</html>

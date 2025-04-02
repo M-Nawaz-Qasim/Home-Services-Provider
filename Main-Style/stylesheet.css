@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italiana&display=swap");
+
+:root {
+  --Color1: #efc75e;
+  --buttonColor: #1e2744;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+#profileIcon {
+    position: fixed;  
+    top: 20px;       
+    right: 20px;        
+    border-radius: 50%;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;  
+    transition: transform 0.3s ease-in-out;
+}
+
+
+#profileIcon:hover {
+    transform: scale(1.1); 
+}
+
+.hero {
+  width: 100%;
+  min-height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.hero h1 {
+  font-size: 64px;
+  font-weight: 400;
+  width: 70%;
+  text-align: center;
+}
+
+.main_image {
+  background-image: url(../Main-Assets/home_mainimage.png);
+  height: 900px;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main_image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1e2744;
+  opacity: 0.8;
+}
+
+.main_image h1,
+span {
+  font-family: "Italiana", serif;
+  position: relative;
+  z-index: 10;
+  font-size: 72px;
+  font-weight: 400;
+}
+
+.main_image span {
+  font-family: "Inter", serif;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.about h2 {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin: 50px 0px;
+}
+
+.about_inner_div {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 50px;
+}
+
+.about_inner_div img {
+  width: 600px;
+}
+
+.about_inner_div .about_text h3 {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.about_inner_div .about_text span,
+p {
+  font-family: "Inter", serif;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.about_inner_div .about_text p {
+  font-weight: 200;
+}
+
+.Services h2 {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin: 50px 0px;
+}
+
+.best_services {
+  background-image: url(../Main-Assets/serevices_background.png);
+  background-size: cover;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 1100px;
+  display: flex;
+  align-items: center;
+}
+
+.best_services::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1e2744;
+  opacity: 0.8;
+}
+
+.services_cards {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+  width: 80%;
+  min-height: 20vh;
+  padding: 20px 0px;
+  margin: auto;
+  row-gap: 100px;
+}
+
+.services_cards .card {
+  width: 30%;
+  background-color: white;
+  height: 350px;
+  text-align: center;
+  line-height: 30px;
+  position: relative;
+}
+
+.services_cards .card img {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 30px;
+}
+
+.services_cards .card h3 {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.services_cards .card p {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.Choose_us {
+  text-align: center;
+}
+
+.Choose_us h2 {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin: 50px 0px 0px 0px;
+}
+
+.Choose_us p {
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+
+.image_Cards {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+.goodness {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.property {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.2);
+  gap: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.property img {
+  width: 80px;
+}
+
+.property div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-left: 20px;
+}
+
+.property div h3 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.property div p {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.contact h2 {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin: 50px 0px;
+}
+
+.contacus {
+  background-image: url(../Main-Assets/contactus.png);
+  background-size: cover;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 900px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 200px;
+}
+
+.contacus::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1e2744;
+  opacity: 0.8;
+}
+.contacus .Contactdiv {
+  z-index: 100;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+}
+.blocks {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 45%;
+  height: 200px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.block img {
+  width: 50px;
+}
+.block h3 {
+  font-size: 20px;
+  font-weight: 600;
+  z-index: 100;
+}
+.block p {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+}
+.form {
+  width: 50%;
+  z-index: 100;
+  height: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.form form {
+  width: 80%;
+}
+.form form input,
+textarea {
+  padding: 15px;
+  background-color: var(--buttonColor);
+  border: 1px solid var(--white);
+  margin: 5px 0px;
+  border-radius: 10px;
+  color: white;
+}
+.form form button {
+  padding: 15px;
+  background-color: #efc75e;
+  border: none;
+  margin: 5px 0px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.form form textarea {
+  width: 95%;
+  height: 200px;
+}

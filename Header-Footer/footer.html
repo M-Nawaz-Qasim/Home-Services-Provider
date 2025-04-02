@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Footer</title>
+    <link rel="stylesheet" href="../Main-Style/stylesheet.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Poppins:wght@100..900&display=swap');
+
+      footer {
+        background-color: black;
+        width: 100%;
+        position: relative;
+      }
+
+      footer .subcribe {
+        width: 90%;
+        position: absolute;
+        background-color: #efc75e;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        left: 50%;
+        top: -5%;
+        z-index: 100;
+        transform: translate(-50%, -60%);
+        gap: 10px;
+        padding: 30px 0px;
+      }
+
+      footer .sub {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+
+      footer .subcribe div {
+        display: flex;
+      }
+
+      footer .subcribe div input {
+        border: none;
+        background-color: var(--buttonColor);
+        padding: 20px;
+        width: 300px;
+      }
+
+      footer .subcribe div > button {
+        padding: 10px;
+        width: 140px;
+        color: black;
+        background-color: rgba(138, 119, 71, 0.7);
+        border: none;
+        font-size: 20px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      footer .subcribe div input::placeholder {
+        color: white;
+        font-size: 16px;
+        font-weight: 300;
+      }
+
+      footer .subcribe span {
+        font-family: "inter", serif;
+        font-size: 38px;
+        font-weight: 500;
+        color: black;
+      }
+
+      .footer {
+        display: flex;
+        justify-content: center;
+        padding: 20px 50px;
+        background-color: #000;
+        margin-top: 30px;
+      }
+
+      .footer .column {
+        width: 40%;
+        margin: 0px 30px;
+        padding: 10px;
+      }
+
+      .footer h2 {
+        color: white;
+        font-size: 18px;
+        margin-top: 50px;
+        margin-bottom: 15px;
+        font-family: "Inter";
+      }
+
+      .footer p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 12px;
+        font-family: "Inter";
+      }
+
+      .footer-bottom {
+        background-color: #000;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .footer-bottom p {
+        margin: 10px 75px;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.8);
+        font-family: "Inter";
+      }
+
+      .footer-bottom a {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        margin: 0 5px;
+        font-family: "Inter";
+      }
+
+      .footer-bottom a:hover {
+        text-decoration: underline;
+      }
+
+      #gap {
+        margin-top: 230px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="gap"></div>
+    <footer class="footer">
+      <div class="subcribe">
+        <div class="sub">
+          <img src="../Main-Assets/envelop.svg" alt="Email Icon" />
+          <span>Subscribe to Our Newsletter</span>
+        </div>
+        <div>
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email Address"
+            required
+          />
+          <button type="submit">Subcribe</button>
+        </div>
+      </div>
+      <div class="column">
+        <h2>Household Maintenance Services</h2>
+        <p>
+          We Provide Best Home Services in Pakistan we provide services in
+          Pakistan since 2021
+        </p>
+        <p>
+          We Provide Best Home Services in Pakistan Professional Electrician,
+          Plumber, House Cleaning, Carpenter Services in Pakistan
+        </p>
+      </div>
+      <div class="column">
+        <h2>Contact Details</h2>
+        <p>University of Mianwali - CS 5th Regular</p>
+        <p>0300-0000000</p>
+        <p>homeservices3@gmail.com</p>
+        <p>Monday-Friday: 9am - 6pm</p>
+      </div>
+    </footer>
+    <div class="footer-bottom">
+      <p>Copyright © All rights reserved. HOUSEHOLD MAINTENANCE SERVICES</p>
+      <p>
+        <a href="#">FAQ</a> / <a href="#">Privacy</a> / <a href="#">Terms</a> /
+        <a href="#">Refund</a>
+      </p>
+    </div>
+  </body>
+</html>

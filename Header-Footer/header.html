@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>header</title>
+    <link rel="stylesheet" href="../Main-Style/stylesheet.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Poppins:wght@100..900&display=swap');
+      .logo {
+        width: 100px;
+        height: 65px;
+      }
+
+      .navbar {
+        background-color: #efc75e;
+        width: 100%;
+        height: 15vh;
+        display: flex;
+        justify-content: center;
+      }
+
+      .nav-container {
+        width: 85%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .link-menu ul {
+        list-style-type: none;
+        overflow: hidden;
+      }
+      .link-menu li {
+        float: left;
+      }
+
+      .link-menu li a {
+        display: block;
+        margin: 0px 15px;
+        font-size: 18px;
+        font-family: "Inter";
+        font-weight: bold;
+        color: #000000;
+        padding: 8px 10px;
+        text-decoration: none;
+      }
+
+      .link-menu li a:hover {
+        color: #df600b;
+      }
+
+      .nav-container button {
+        width: 100px;
+        height: 35px;
+        margin: 0px 5px;
+        background-color: #1e2744;
+        color: #ffffff;
+        outline: none;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        font-family: "Inter";
+        font-size: 15px;
+      }
+
+      .nav-container button:hover {
+        background-color: #df600b;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+              <div>
+                <img class="logo" src="../logo/logo.png" alt="logo" />
+              </div>
+              <div class="link-menu">
+                <ul>
+                  <li><a href="../Main/Home.html">HOME</a></li>
+                  <li><a href="../Main/about.html">About Us</a></li>
+                  <li><a href="../Main/services.html">Services</a></li>
+                  <li><a href="../Main/contact-us.html">Contact Us</a></li>
+                </ul>
+              </div>
+              <div>
+                <a href="../Login-Signup/login.html"><button>LOGIN</button></a>
+                <a href="../Login-Signup/signup.html"><button>SIGNUP</button></a>
+              </div>
+            </div>
+          </nav>
+    </header>
+  </body>
+</html>

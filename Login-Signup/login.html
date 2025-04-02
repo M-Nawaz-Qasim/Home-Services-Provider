@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="login_style.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <section>
+      <div class="overlay-login">
+        <div class="bg-image">
+          <div class="box">
+            <div class="login-box">
+              <p>LOG<span class="up">IN</span></p>
+              <div class="form-box">
+                <form action="../PHP/login.php" method="POST">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="EMAIL ADDRESS"
+                    required
+                  />
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="PASSWORD"
+                    required
+                  />
+                  <button type="submit">LOGIN</button>
+                </form>
+                <p class="msg">
+                  Don't have an account?
+                  <a href="../Login-Signup/signup.html">Sign up here</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/01/31/10/20250131101555-LIZ1X50J.js"></script>
+
+    <div id="footer"></div>
+    <script src="../Header-Footer/headerFooter.js"></script>
+  </body>
+</html>
